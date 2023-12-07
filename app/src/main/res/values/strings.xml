@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Chatting App</string>
+    <string name="label_signup">Sign Up</string>
+    <string name="label_signin">Sign In</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="btn_login">Login</string>
+    <string name="enter_username">Harshal</string>
+    <string name="enter_email">example@gmail.com</string>
+    <string name="enter_password">Password</string>
+    <string name="enter_confirm_password">Confirm Password</string>
 </resources>
