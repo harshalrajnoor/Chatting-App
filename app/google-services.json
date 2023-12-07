@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "523348812225",
+    "project_id": "kotlin-chat-app-df1a8",
+    "storage_bucket": "kotlin-chat-app-df1a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523348812225:android:f7abaf1316ee407a8ecf40",
+        "android_client_info": {
+          "package_name": "com.example.chattingapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb_XAUlcPjW4Q8GPkYbI1UGFwBdrZSdTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
