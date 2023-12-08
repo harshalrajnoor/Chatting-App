@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import java.lang.Exception
 
 private lateinit var auth: FirebaseAuth
 private lateinit var databaseReference: DatabaseReference
@@ -36,27 +37,31 @@ class SignUpActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         btnSignup.setOnClickListener{
-            val userName = etName.text.toString()
-            val email = etEmail.text.toString()
-            val password = etPassword.text.toString()
-            val confirmPassword = etConfirmPassword.text.toString()
+          try {
+              val userName = etName.text.toString()
+              val email = etEmail.text.toString()
+              val password = etPassword.text.toString()
+              val confirmPassword = etConfirmPassword.text.toString()
 
-            if(TextUtils.isEmpty(userName)){
-                Toast.makeText(applicationContext,"username is required",Toast.LENGTH_SHORT).show()
-            }
-            if(TextUtils.isEmpty(email)){
-                Toast.makeText(applicationContext,"email is required",Toast.LENGTH_SHORT).show()
-            }
-            if(TextUtils.isEmpty(password)){
-                Toast.makeText(applicationContext,"password is required",Toast.LENGTH_SHORT).show()
-            }
-            if(TextUtils.isEmpty(confirmPassword)){
-                Toast.makeText(applicationContext,"confirm password is required",Toast.LENGTH_SHORT).show()
-            }
-            if(password != confirmPassword){
-                Toast.makeText(applicationContext,"password does not match",Toast.LENGTH_SHORT).show()
-            }
-            registerUser(userName,email,password)
+              if(TextUtils.isEmpty(userName)){
+                  Toast.makeText(applicationContext,"username is required",Toast.LENGTH_SHORT).show()
+              }
+              if(TextUtils.isEmpty(email)){
+                  Toast.makeText(applicationContext,"email is required",Toast.LENGTH_SHORT).show()
+              }
+              if(TextUtils.isEmpty(password)){
+                  Toast.makeText(applicationContext,"password is required",Toast.LENGTH_SHORT).show()
+              }
+              if(TextUtils.isEmpty(confirmPassword)){
+                  Toast.makeText(applicationContext,"confirm password is required",Toast.LENGTH_SHORT).show()
+              }
+              if(password != confirmPassword){
+                  Toast.makeText(applicationContext,"password does not match",Toast.LENGTH_SHORT).show()
+              }
+              registerUser(userName,email,password)
+          }catch (e:Exception){
+              Toast.makeText(applicationContext,"Some error occurred",Toast.LENGTH_SHORT).show()
+          }
         }
 
     }
